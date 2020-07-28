@@ -1,0 +1,43 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Hashtag Predictor</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+  </head>
+  <body>
+    <main role="main" class="container">
+       <center>
+      <div id="classifier">
+        <div class="heading">
+          <h1>Hashtag Predictor</h1>
+          <p class="lead">The <i>Hashtag Predictor</i> is a model that predicts hashtags for images.</p>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+              <img id="img" src="img/hashtag.jpg" width=375 height=375 />
+          </div>
+        </div>
+        <div ><label id="console"></label></div>
+        <div class="row">
+            <div class="col-sm button-row">
+              <label class="btn btn-primary" for="my-file-selector">
+                  <input id="my-file-selector" type="file" class="d-none" onchange="changeImage()" accept="image/jpeg, image/png, image/jpg">
+                  Upload New Picture
+              </label>
+              <label class="btn btn-primary class-b" for="predict">
+                  <input id="predict" type="button" class="d-none" >
+                  Predict
+              </label>
+            </div>
+        </div>
+      </center>
+      </div>
+    </main>
+  
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+
+    <script src="index.js"></script>
+  </body>
+</html>
